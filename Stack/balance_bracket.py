@@ -1,4 +1,7 @@
 from stack import Stack
+"""
+determine whether or not a string has balanced usage of brackets by using a stack.
+"""
 def is_matched(open_bracket: str, close_bracket: str) -> bool:
     if open_bracket == '(' and close_bracket == ')':
         return True
