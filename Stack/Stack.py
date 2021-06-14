@@ -8,8 +8,8 @@ class Stack():
     def push(self, item) -> None:
         self.items.append(item)
 
-    def pop(self) -> None:
-        self.items.pop()
+    def pop(self) -> any:
+        return self.items.pop()
 
     def get_stack(self) -> list:
         return self.items
@@ -21,8 +21,8 @@ class Stack():
         if not self.is_empty():
             return self.items[-1]
 
-   
-
+"""   
+TESTING
 
 myStack = Stack()
 print(myStack.is_empty()) # True
@@ -34,3 +34,4 @@ myStack.pop()
 print(myStack.get_stack()) # A
 myStack.push('Item C')
 print(myStack.peek()) # C
+"""
