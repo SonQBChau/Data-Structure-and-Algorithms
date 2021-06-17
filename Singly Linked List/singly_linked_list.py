@@ -137,12 +137,12 @@ class LinkedList:
 
         self.head = _reverse_recursive(cur=self.head, prev=None)
         
-llist = LinkedList()
-llist.append("A")
-llist.append("B")
-llist.append("C")
-llist.append("D")
+# llist = LinkedList()
+# llist.append("A")
+# llist.append("B")
+# llist.append("C")
+# llist.append("D")
 
-llist.reverse_recursive()
+# llist.reverse_recursive()
 
-llist.print_list()
+# llist.print_list()
