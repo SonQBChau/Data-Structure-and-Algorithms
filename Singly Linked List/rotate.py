@@ -11,9 +11,9 @@ def rotate(llist, k):
             p = p.next 
             q = q.next 
             count += 1
-        
+        p = prev
+
         # move q to the end
-        prev  = None
         while q:
             prev = q 
             q = q.next 
