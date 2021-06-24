@@ -1,12 +1,30 @@
 from singly_linked_list import LinkedList
-def is_palindrome(llist,method):
+def is_palindrome(llist,method) -> bool:
+    # Solution 1: Using a string
     if method == 1:
-        return 
+        str = ''
+        cur = llist.head
+        while cur:
+            str += cur.data
+            cur = cur.next
+        return str == str[::-1]
+    # Solution 2: Using a stack
     elif method == 2:
-        return 
+        cur = llist.head
+        stck = []
+        while cur:
+            stck.append(cur.data)
+            cur = cur.next
+        cur = llist.head
+        while cur:
+            data = stck.pop()
+            if data != cur.data:
+                return False
+            cur = cur.next
+        return True
     elif method == 3:
         return 
-
+    return False
 # Example palindromes:
 # RACECAR, RADAR
 
