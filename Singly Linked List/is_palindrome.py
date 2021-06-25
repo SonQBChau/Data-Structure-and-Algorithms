@@ -22,9 +22,35 @@ def is_palindrome(llist,method) -> bool:
                 return False
             cur = cur.next
         return True
+    # Solution 3: Using Two Pointers 
     elif method == 3:
-        return 
+        if llist.head:
+            p = llist.head
+            q = llist.head
+            prev = []
+
+            i = 0
+            # move q to the end of the linked list
+            while q:
+                prev.append(q)
+                q = q.next
+                i += 1
+            q = prev[i-1]
+
+            count = 1
+            
+            while count <= i//2 + 1:
+                if prev[-count].data != p.data:
+                    return False
+                p = p.next
+                count += 1
+            return True
+        else:
+            return True
+
+         
     return False
+
 # Example palindromes:
 # RACECAR, RADAR
 
