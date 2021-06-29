@@ -24,4 +24,10 @@ class CircularLinkedList:
             new_data.next = self.head
 
     def print_list(self):
-        pass
+        cur = self.head
+
+        while cur:
+            print(cur.data)
+            cur = cur.next
+            if cur == self.head:
+                break
