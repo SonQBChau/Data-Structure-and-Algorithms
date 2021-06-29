@@ -62,14 +62,23 @@ class CircularLinkedList:
                     if cur.data == key:
                         prev.next = cur.next 
                         cur = cur.next
-        
 
-cllist = CircularLinkedList()
-cllist.append("A")
-cllist.append("B")
-cllist.append("C")
-cllist.append("D")
+    def __len__(self):
+        cur = self.head
+        count = 0
+        while cur:  
+            count += 1
+            cur = cur.next
+            if cur == self.head:
+                break
+        return count      
 
-cllist.remove("A")
-cllist.remove("C")
-cllist.print_list()
+# cllist = CircularLinkedList()
+# cllist.append("A")
+# cllist.append("B")
+# cllist.append("C")
+# cllist.append("D")
+
+# cllist.remove("A")
+# cllist.remove("C")
+# cllist.print_list()
