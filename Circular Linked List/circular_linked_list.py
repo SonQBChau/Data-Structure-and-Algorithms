@@ -6,9 +6,6 @@ class Node:
 class CircularLinkedList:
     def __init__(self):
         self.head = None
-    
-    def prepend(self, data):
-        pass
 
     def append(self, data):
         # if empty, we create a head node first
@@ -31,3 +28,16 @@ class CircularLinkedList:
             cur = cur.next
             if cur == self.head:
                 break
+    
+    def prepend(self, data):
+        new_node = Node(data)
+        cur = self.head
+        new_node.next = self.head
+
+        if not self.head:
+            new_node.next = new_node
+        else:
+            while cur.next != self.head:
+                cur = cur.next
+            cur.next = new_node
+        self.head = new_node
