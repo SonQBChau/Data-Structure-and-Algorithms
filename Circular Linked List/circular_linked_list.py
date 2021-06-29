@@ -41,3 +41,10 @@ class CircularLinkedList:
                 cur = cur.next
             cur.next = new_node
         self.head = new_node
+
+# cllist = CircularLinkedList()
+# cllist.append("C")
+# cllist.append("D")
+# cllist.prepend("B")
+# cllist.prepend("A")
+# cllist.print_list()
