@@ -1,6 +1,6 @@
 class Node:
     def __init__(self, data):
-        self.data = None
+        self.data = data
         self.next = None
         self.prev = None
 
@@ -33,10 +33,10 @@ class DoublyLinkedList:
             
 
     def print_list(self):
-        cur = self.head
+        cur = self.head 
         while cur:
             print(cur.data)
-            cur = cur.next 
+            cur = cur.next
     
     def add_after_node(self, key, data):
         cur = self.head
@@ -46,16 +46,16 @@ class DoublyLinkedList:
                 return
             elif cur.data == key:
                 new_node = Node(data)
-                nxt = cur.next
+                nxt = cur.next 
                 cur.next = new_node
                 new_node.next = nxt
-                new_node.prev = cur
+                new_node.prev = cur 
                 nxt.prev = new_node
-                return    
+                return
             cur = cur.next
 
     def add_before_node(self, key, data):
-        cur = self.head
+        cur = self.head 
         while cur:
             if cur.prev is None and cur.data == key:
                 self.prepend(data)
@@ -82,6 +82,6 @@ dllist.append(3)
 dllist.append(4)
 dllist.prepend(5)
 dllist.add_after_node(3,6)
-# dllist.add_before_node(4,9)
+dllist.add_before_node(4,9)
 
 dllist.print_list()
