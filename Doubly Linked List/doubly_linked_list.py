@@ -79,7 +79,37 @@ class DoublyLinkedList:
                     cur = None
                     self.head = None
                     return
-                cur = cur.next
+                # Case 2:
+                else:
+                    nxt = cur.next
+                    cur.next = None 
+                    nxt.prev = None
+                    cur = None
+                    self.head = nxt
+                    return 
+
+            elif cur.data == key:
+                # Case 3:
+                if cur.next:
+                    nxt = cur.next 
+                    prev = cur.prev
+                    prev.next = nxt
+                    nxt.prev = prev
+                    cur.next = None 
+                    cur.prev = None
+                    cur = None
+                    return
+               # Case 4:
+                else:
+                    prev = cur.prev 
+                    prev.next = None 
+                    cur.prev = None 
+                    cur = None 
+                    return 
+
+            cur = cur.next
+                
+
 
             
 
