@@ -70,6 +70,16 @@ class DoublyLinkedList:
                 return
             cur = cur.next
 
+    def delete(self, key):
+        cur = self.head
+        while cur:
+            if cur.data == key and cur == self.head:
+                # Case 1:
+                if not cur.next:
+                    cur = None
+                    self.head = None
+                    return
+                cur = cur.next
 
             
 
