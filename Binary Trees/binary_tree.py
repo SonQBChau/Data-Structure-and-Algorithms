@@ -54,7 +54,14 @@ class BinaryTree(object):
 
         return 1 + max(left_height, right_height)
 
+    def size(self, node):
+        if node is None:
+            return 0
 
+        left_size = self.size(node.left)
+        right_size = self.size(node.right)
+
+        return 1 + (left_size + right_size)
 # 1-2-4-5-3-6-7-
 # 4-2-5-1-6-3-7
 # 4-5-2-6-7-3-1
