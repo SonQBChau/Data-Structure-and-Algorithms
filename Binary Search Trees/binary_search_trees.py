@@ -36,7 +36,6 @@ class BST(object):
       else:
           return self.search_helper(current.left, find_val)
 
-
 bst = BST(10)
 bst.insert(3)
 bst.insert(1)
