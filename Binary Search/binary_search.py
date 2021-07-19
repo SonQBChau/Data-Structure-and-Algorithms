@@ -7,7 +7,17 @@ def linear_search(data, target):
 
 # Iterative Binary Search
 def binary_search_iterative(data, target):
-    pass
+    low = 0
+    high = len(data) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if data[mid] == target:
+            return True
+        elif data[mid] > target:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return False
 
 # Recursive Binary Search
 def binary_search_recursive(data, target, low, high):
