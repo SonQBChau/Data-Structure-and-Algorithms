@@ -7,13 +7,11 @@ def find_uppercase_iterative(input_str):
 
 
 def find_uppercase_recursive(input_str, idx=0):
-    if idx >= len(input_str):
-        return "No uppercase character found"
     if input_str[idx].isupper():
         return input_str[idx]
-    else:
-        idx += 1
-        return find_uppercase_recursive(input_str, idx)
+    if idx == len(input_str) - 1:
+        return "No uppercase character found"
+    return find_uppercase_recursive(input_str, idx+1)
 
 str_1 = "lucidProgramming"
 str_2 = "LucidProgramming"
