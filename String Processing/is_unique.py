@@ -15,5 +15,14 @@ def is_unique(input_str):
 def is_unique_2(input_str):
     return len(set(input_str)) == len(input_str)
 
+def is_unique_3(input_str):
+    alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+    for i in input_str:
+        if i in alpha:
+            alpha = alpha.replace(i, "")
+        else:
+            return False
+    return True
+
 print(is_unique('abCDefGh'))
 print(is_unique('nonunique'))
