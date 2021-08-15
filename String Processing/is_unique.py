@@ -10,5 +10,8 @@ def is_unique(input_str):
     
     return True
 
+def is_unique_2(input_str):
+    return len(set(input_str)) == len(input_str)
+
 print(is_unique('abCDefGh'))
 print(is_unique('nonunique'))
