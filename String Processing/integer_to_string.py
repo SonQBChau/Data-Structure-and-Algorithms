@@ -1,3 +1,6 @@
+# ord() returns an integer which represents the Unicode code point
+# chr() returns a character from an integer that represents the Unicode code point
+
 ## Prints 48 which is the Unicode code point of the character '0'
 print(ord('0'))
 ## Prints the character '0' as 48 is Unicode code point of the character '0'
