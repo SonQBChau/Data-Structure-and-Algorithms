@@ -24,5 +24,12 @@ def is_unique_3(input_str):
             return False
     return True
 
+print('Solution 1 -----------')
 print(is_unique('abCDefGh'))
 print(is_unique('nonunique'))
+print('Solution 2 -----------')
+print(is_unique_2('abCDefGh'))
+print(is_unique_2('nonunique'))
+print('Solution 3 -----------')
+print(is_unique_3('abCDefGh'))
+print(is_unique_3('nonunique'))
