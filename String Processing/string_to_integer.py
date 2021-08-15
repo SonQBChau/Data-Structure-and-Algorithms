@@ -30,3 +30,13 @@ print(str_to_int(s))
 
 s = "-123"
 print(str_to_int(s))
+
+# input_str = 123
+# len(input_str) = 3
+
+# i = 0 
+# place = 10** (3 - (0+1)) = 10** (2) = 100 
+# i = 1
+# place = 10** (3 - (1+1)) = 10** (1) = 10
+# i = 2
+# place = 10** (3 - (2+1)) = 10** (0) = 1
