@@ -1,3 +1,5 @@
+# Python dictionary to solve the problem in linear time complexity, 
+# but because of the additional data structure, the space complexity is also linear.
 def is_unique(input_str):
     d = dict()
     input = ''.join(input_str.lower())
